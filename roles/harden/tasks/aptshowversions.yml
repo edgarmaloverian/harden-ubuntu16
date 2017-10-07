@@ -1,0 +1,3 @@
+---
+- name: make sure debsums is (are) installed
+  apt: name=apt-show-versions state=latest
