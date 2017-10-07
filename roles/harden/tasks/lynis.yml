@@ -1,0 +1,16 @@
+---
+- name: let's add key
+  apt-key: 
+    keyserver: keyserver.ubuntu.com
+    id: C80E383C3DE9F082E01391A0366C67DE91CA5D5F
+    state: present
+
+- name: add repo now
+  apt-repository:
+    repo: deb [arch=amd64] https://packages.cisofy.com/community/lynis/deb/ xenial main
+    state: present
+ 
+- name: aaand install lynis
+  apt:
+    name: lynis
+    state: latest 

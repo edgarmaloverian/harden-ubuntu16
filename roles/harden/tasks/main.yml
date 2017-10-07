@@ -1,3 +1,4 @@
 ---
 
 - include: "acct.yml"
+- include: "lynis.yml"
