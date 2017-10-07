@@ -11,5 +11,5 @@
  
 - name: aaand install ossec
   apt:
-    name: ossec
+    name: ossec-hids
     state: latest 
