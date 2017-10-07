@@ -1,3 +1,9 @@
 ---
 - name: make sure accounting is there
   apt: name=acct state=latest
+
+- name: enable log dir must be created by hand
+  file: state=directory path=/var/log/pacct owner=root mode=0644
+
+- name: start accounting  
+  service: name=acct state=started enabled=yes
