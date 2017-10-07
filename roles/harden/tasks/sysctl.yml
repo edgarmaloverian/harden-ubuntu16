@@ -1,0 +1,8 @@
+---
+- name: replace sysctl with hardened one
+  template: backup=yes src=sysctl.conf dest=/etc/sysctl.conf
+  register: newsysctl
+
+- name: reload sysctl
+  when: newsysctl.changed
+  command: sysctl -p
