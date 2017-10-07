@@ -1,4 +1,4 @@
 - name: Make sure we are up to date (don't start indepotency philosophy talks here)
   apt:
-    name: "*"
-    state: latest
+    upgrade: dist
+
