@@ -1,0 +1,15 @@
+---
+- name: let's add key
+  apt_key: 
+    url: http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key
+    state: present
+
+- name: add repo now
+  apt_repository:
+    repo: deb http://ossec.wazuh.com/repos/apt/ubuntu xenial main
+    state: present
+ 
+- name: aaand install ossec
+  apt:
+    name: ossec
+    state: latest 

@@ -3,3 +3,4 @@
 - include: "acct.yml"
 - include: "lynis.yml"
 - include: "debsums.yml"
+- include: "ossec.yml"
