@@ -3,6 +3,7 @@
 - include: "aptupdate.yml"
 - include: "sysctl.yml"
 - include: "acct.yml"
+- include: "arpwatch.yml"
 - include: "lynis.yml"
 - include: "debsums.yml"
 - include: "aptshowversions.yml"
