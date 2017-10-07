@@ -4,4 +4,6 @@
 ```
 apt install git
 cd /opt/
-git clone https://github.com/edgarmaloverian/harden-ubuntu16.git```
+git clone https://github.com/edgarmaloverian/harden-ubuntu16.git
+apt install ansible
+```
