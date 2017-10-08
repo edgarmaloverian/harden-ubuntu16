@@ -2,5 +2,5 @@
 - name: block usb storage
   lineinfile: 
     backup: yes
-    path: /etc/modprobe.d/blacklist.conf
+    dest: /etc/modprobe.d/blacklist.conf
     line: 'blacklist usb-storage'
