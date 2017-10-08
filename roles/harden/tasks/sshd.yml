@@ -1,0 +1,4 @@
+---
+- name: secure sshd config
+  template: backup=yes src=sshd_config dest=/etc/ssh/sshd_config
+  notify: restart ssh

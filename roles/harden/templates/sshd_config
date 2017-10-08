@@ -1,0 +1,18 @@
+# Only default overrides here (try sshd -T)
+LogLevel VERBOSE
+
+AllowTcpForwarding no
+AllowAgentForwarding no
+TCPKeepAlive no
+Compression no
+UsePAM yes
+ClientAliveCountMax 2
+MaxSessions 2
+MaxAuthTries 3
+PasswordAuthentication no
+clientaliveinterval 300
+# PermitRootLogin NO   # TBD find way to make direct root blocking smooth
+# AllowUsers ubuntu root #
+banner /etc/issue.net
+acceptenv none
+Subsystem sftp /usr/lib/openssh/sftp-server
