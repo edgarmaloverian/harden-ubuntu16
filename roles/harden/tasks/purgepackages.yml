@@ -1,2 +1,2 @@
 - name: purge packages
-  command: apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')
+  shell: apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')
