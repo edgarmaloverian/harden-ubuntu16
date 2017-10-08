@@ -2,7 +2,7 @@
 
 - include: "aptupdate.yml"
 - include: "sysctl.yml"
-- incluse: "sshd.yml"
+- include: "sshd.yml"
 - include: "acct.yml"
 - include: "arpwatch.yml"
 - include: "auditd.yml"
