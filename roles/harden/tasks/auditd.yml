@@ -1,0 +1,17 @@
+---
+- name: auditd installation
+  apt: name={{ item }} state=present
+  with_items:
+    - auditd
+    - audispd-plugins
+
+- name: place right configuration
+  template: backup=yes src=audit.rules dest=/etc/audit/audit.rules owner=root group=root mode=0640
+  register: newconfig
+
+- name: configure auditd
+  template: backup=yes src=auditd.conf dest=/etc/audit/auditd.conf owner=root group=root mode=0640
+
+- name: load rules
+  when: newconfig.changed
+  command: auditctl -R /etc/audit/audit.rules
