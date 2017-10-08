@@ -1,0 +1,14 @@
+---
+- name: sysstat package must present
+  apt: 
+    name: sysstat 
+    state: latest
+
+- name: enable sysstat
+  lineinfile: >
+    backup=yes
+    state=present
+    dest=/etc/default/sysstat
+    backrefs=yes
+    regexp=^ENABLED="false"
+    line='ENABLED="true"'

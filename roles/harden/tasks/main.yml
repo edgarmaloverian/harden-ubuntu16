@@ -5,6 +5,7 @@
 - include: "closeusb.yml"
 - include: "sshd.yml"
 - include: "login_defs.yml"
+- include: "sysstat.yml"
 - include: "acct.yml"
 - include: "arpwatch.yml"
 - include: "apparmor.yml"
