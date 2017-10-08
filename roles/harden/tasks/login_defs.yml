@@ -1,0 +1,33 @@
+---
+- name: Set minimum password period
+  lineinfile: >
+    backup=yes
+    state=present
+    dest=/etc/login.defs
+    backrefs=yes
+    regexp="^PASS_MIN_DAYS\s+"
+    line="PASS_MIN_DAYS\t3"
+- name: Set maximum password period
+  lineinfile: >
+    backup=yes
+    state=present
+    dest=/etc/login.defs
+    backrefs=yes
+    regexp="^PASS_MAX_DAYS\s+"
+    line="PASS_MAX_DAYS\t90"
+- name: Set umask    
+  lineinfile: >
+    backup=yes
+    state=present
+    dest=/etc/login.defs
+    backrefs=yes
+    regexp="^UMASK\s+"
+    line="UMASK 027"
+- name: Set umask in /etc/init.d/rc
+  lineinfile: >
+    backup=yes
+    state=present
+    dest=/etc/init.d/rc
+    backrefs=yes
+    regexp="^umask\s+"
+    line="umask 027"
