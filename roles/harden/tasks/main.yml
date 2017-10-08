@@ -2,7 +2,7 @@
 
 - include: "aptupdate.yml"
 - include: "sysctl.yml"
-- include: "closeusb.uml"
+- include: "closeusb.yml"
 - include: "sshd.yml"
 - include: "login_defs.yml"
 - include: "acct.yml"
