@@ -11,6 +11,7 @@
 - include: "arpwatch.yml"
 - include: "apparmor.yml"
 - include: "auditd.yml"
+- include: "issue.yml"
 - include: "lynis.yml"
 - include: "debsums.yml"
 - include: "aptshowversions.yml"
