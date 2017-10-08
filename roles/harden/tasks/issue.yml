@@ -1,0 +1,6 @@
+---
+- name: place legal warnings
+  template: backup=yes src=issue dest=/etc/issue
+
+- name: place legal banner for network users
+  template: backup=yes src=issue.net dest=/etc/issue.net
