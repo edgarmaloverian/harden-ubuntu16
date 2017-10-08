@@ -1,4 +1,4 @@
 ---
 - name: make sure apparmor is installed
   apt: name={{ item }} state=present
-  with_items: [ apparmor, ubuntu-core-security-apparmor]
+  with_items: [ apparmor, apparmor-utils, ubuntu-core-security-apparmor]
