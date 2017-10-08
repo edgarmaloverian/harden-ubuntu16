@@ -6,6 +6,7 @@
 - include: "login_defs.yml"
 - include: "acct.yml"
 - include: "arpwatch.yml"
+- include: "apparmor.yml"
 - include: "auditd.yml"
 - include: "lynis.yml"
 - include: "debsums.yml"
