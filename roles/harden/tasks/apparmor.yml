@@ -2,4 +2,3 @@
 - name: make sure apparmor is installed
   apt: name={{ item }} state=present
   with_items: [ apparmor, ubuntu-core-security-apparmor]
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_release == "xenial"
